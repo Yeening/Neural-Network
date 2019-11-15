@@ -154,7 +154,7 @@ def train_cnn(x_train, y_train, x_vali=None, y_vali=None, args=None):
 #     es = EarlyStopping(monitor='val_acc', verbose=1, patience=20)
 #     mc = ModelCheckpoint(filepath=model_path, monitor='val_acc', verbose=1, save_best_only=True)
 #     history = model.fit(x_train, y_train, batch_size=200, validation_split = 0.15, epochs=500, callbacks = [es,mc])
-    history = model.fit(x_train, y_train, batch_size=200, epochs=1)
+    history = model.fit(x_train, y_train, batch_size=200, epochs=70)
     return model, history
 
 
